@@ -1,3 +1,15 @@
+
+#                   ************** PROGRAMACION AVANZADA **************
+
+#                        ///// MODELAR GERENTE \\\\\
+#Enunciado: Escriba una aplicacion que modele en el paradigma orientado a objetos el siguiente escenario.
+   
+#        El gerente de la empresa es un empleado que mide 1.8 m, se llama <nombre> y tiene puesto un saco
+#        con tres botones. En este momento el gerente esta entrevistando a una persona para su contratacion.
+
+#        ALUMNA: Sarahi Romano Guerra        
+
+
 class Empresa:
     def __init__(self):
         pass
@@ -5,10 +17,6 @@ class Empresa:
 class Empleados(Empresa):
     def __init__(self):
         pass
-    #def __init__(self,DirGen, Gerente, RecHumanos ): 
-    #    self.DirGen = DirGen
-    #    self.Gerente = Gerente
-    #    self.RecHumanos = RecHumanos
         
 class Persona:
     def __init__(self, Persona):
