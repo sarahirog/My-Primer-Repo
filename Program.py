@@ -15,9 +15,13 @@ class Empresa:
         pass
 
 class Empleados(Empresa):
-    def __init__(self):
-        pass
+    def __init__(self, nombre, cargo):
+        self.__nombre = nombre
+        self.cargo = cargo
         
+#class Gerente(Empresa):
+        
+    
 class Persona:
     def __init__(self, Persona):
         self.Persona = Persona
