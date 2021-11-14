@@ -38,6 +38,7 @@ class Empleados(  Empresa):
     
 class Gerente(Empleados):
     def __init__(self, salario,nombre, apellido, edad, carrera, cel, antiguadad):
+               
         self.__nombre =nombre
         self.__Apellido = apellido
         self.edad = edad
