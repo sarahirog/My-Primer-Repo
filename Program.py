@@ -9,22 +9,38 @@
 
 #        ALUMNA: Sarahi Romano Guerra        
 
-
-class Empresa:
-    def __init__(self):
-        pass
-
-class Empleados(Empresa):
-    def __init__(self, nombre, cargo):
-        self.__nombre = nombre
-        self.cargo = cargo
-        
-#class Gerente(Empresa):
-        
+      
     
 class Persona:
-    def __init__(self, Persona):
-        self.Persona = Persona
+    def __init__(self, nombre, apellido, edad):
+        self.__nombre = nombre
+        self.__apellido = apellido
+        self.edad = edad
+
+class Empresa:
+    def __init__(self,nombreEmp,numEmpl):
+        self.__nombreEmp = nombreEmp
+        self.numEmpl = numEmpl
+        
+class Empleados(  Empresa):
+    def __init__(self,  nombre, apellido, edad, carrera,cel):
+        self.__nombre =nombre
+        self.__Apellido = apellido
+        self.edad = edad
+        self.__numCel = cel
+        self.carrera = carrera
+        
+        
+class Gerente(Empleados):
+    def __init__(self, salario,nombre, apellido, edad, carrera, cel):
+        self.salario = salario
+        super().__init__(self, nombre, apellido, edad, carrera, cel)
+        
+class SolicitarEmpleo(Persona):
+    def __init__(self, nombre, apellido, edad, Especialidad):
+        self.Especialidad = Especialidad
+        super().__init__(nombre, apellido, edad)
+        
 
 class Vestimenta: 
     def __init__(self):
