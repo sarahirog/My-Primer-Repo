@@ -9,8 +9,7 @@
 
 #        ALUMNA: Sarahi Romano Guerra        
 
-      
-    
+   
 class Persona:
     def __init__(self, nombre, apellido, edad):
         self.__nombre = nombre
@@ -18,9 +17,15 @@ class Persona:
         self.edad = edad
 
 class Empresa:
-    def __init__(self,nombreEmp,numEmpl):
+    def __init__(self,nombreEmp,Servicio,numEmpl):
         self.__nombreEmp = nombreEmp
+        self.servicio = Servicio
         self.numEmpl = numEmpl
+        
+    def Info(self):
+        print("Bienvenido a : ", self.__nombreEmp)
+        print("Esta Empresa tiene {} Empleados".format(self.numEmpl))
+        
         
 class Empleados(  Empresa):
     def __init__(self,  nombre, apellido, edad, carrera,cel):
@@ -30,16 +35,27 @@ class Empleados(  Empresa):
         self.__numCel = cel
         self.carrera = carrera
         
-        
+    
 class Gerente(Empleados):
-    def __init__(self, salario,nombre, apellido, edad, carrera, cel):
+    def __init__(self, salario,nombre, apellido, edad, carrera, cel, antiguadad):
+        self.__nombre =nombre
+        self.__Apellido = apellido
+        self.edad = edad
+        self.__numCel = cel
+        self.carrera = carrera
         self.salario = salario
-        super().__init__(self, nombre, apellido, edad, carrera, cel)
+        self.antiguedad =antiguadad
         
-class SolicitarEmpleo(Persona):
-    def __init__(self, nombre, apellido, edad, Especialidad):
-        self.Especialidad = Especialidad
-        super().__init__(nombre, apellido, edad)
+      #  super().__init__(self, nombre, apellido, edad, carrera, cel)
+        
+    def Presentacion(self):
+        print("Hola Mi nombre es: ", self.__nombre, self.__Apellido)
+        print("Tengo: ",self.edad)
+        print("Soy {} y trabajo en esta empresa por {} años".format(self.carrera,self.antiguedad))   
+        
+    def Entrevistar(self):
+        print("Hola soy ",self.__nombre," Y estoy trabajando")
+        
         
 
 class Vestimenta: 
@@ -69,6 +85,4 @@ class VesInfromal(Vestimenta):
         
     def Vestir(self):
         print("El Usuario posee Vestimenta Informal")
-        
-        
-        
+
