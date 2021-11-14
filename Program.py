@@ -34,7 +34,25 @@ class Empleados(  Empresa):
         self.edad = edad
         self.__numCel = cel
         self.carrera = carrera
+         
         
+    def getNombre(self):
+        return self.__nombre
+    def getApellido(self):
+        return self.__Apellido
+    def getEdad(self):
+        return self.edad
+    def getCarrera(self):
+        return self.carrera
+    
+    def setNombre(self,NuevoNombre):
+        self.__nombre = NuevoNombre
+    def setApellido(self, NuevoApellido):
+        self.__Apellido = NuevoApellido
+    def setEdad(self, NuevaEdad):
+        self.edad = NuevaEdad
+    def setCarrera(self, NuevaCarrera):
+        self.carrera = NuevaCarrera
     
 class Gerente(Empleados):
     def __init__(self, salario,nombre, apellido, edad, carrera, cel, antiguadad):
